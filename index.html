@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login Page</title>
+		<style = "text/css">
+		    *{
+		    	margin:0px;
+		    	padding:0px;
+		    }
+			header{
+			background-image:url(pic3.jpg);
+		  	background-size: cover;
+		  	background-repeat: no-repeat;
+		  	background-position: center;
+		  	height:130vh;
+			}
+			h1{
+				font-size: 60px;
+				color:white;
+				font-weight:100%;
+				padding-bottom:40px;
+			}
+			.certain{
+				margin-top:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<header><img src="th.jpg" class="certain" height="150px" width="150px">
+			<center><h1>Login Page<br>(ISOI)<br>VIT Student chapter</center></h1>	
+		<center><form  action="login.html" method="post" name = "myform" onsubmit="return validateForm() ">
+			<label><strong>Reg No.</strong></label>
+			<input type="text" name="Registration" placeholder="Reg.No." id="Registration">
+			<br>
+			<br>
+			<label><strong>Password</strong></label>
+			<input type="text" name="Password" placeholder="Password" id="Password">
+			<br>
+			<br>
+			<input type="submit" name="submit" value="submit">
+		</form></center>
+		</header>
+		<script>
+			function validateForm(){
+				var Registration = document.forms["myform"]["Registration"].value;
+				var Password = document.forms["myform"]["Password"].value;
+			if(Registration==null || Registration=="" || Registration.length<9){
+				alert("Enter valid Reg. No.");
+				return false;
+			}
+			if(Password==null || Password=="" || Password.length<9){
+				alert("Password should be of 9 or more characters")
+				return false;
+			}
+		}
+		</script>
+	</body>
+</html>
