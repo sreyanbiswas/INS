@@ -45,12 +45,12 @@
 			function validateForm(){
 				var Registration = document.forms["myform"]["Registration"].value;
 				var Password = document.forms["myform"]["Password"].value;
-			if(Registration==null || Registration=="" || Registration.length<9){
+			if(Registration==null || Registration=="" || Registration.length!=9){
 				alert("Enter valid Reg. No.");
 				return false;
 			}
 			if(Password==null || Password=="" || Password.length<9){
-				alert("Password should be of 9 or more characters")
+				alert("Password is incorrect")
 				return false;
 			}
 		}
